@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="./style.css" />
+<script src="./angular.min.js"></script>
+<script src="./script.js"></script>
+
+<body ng-app="myApp" ng-controller="MyCtl">
+  <main class="d-flex align-items-center">
+    <div class="container">
+      <div class="login-card">
+        <div class="card-body">
+          <div class="brand-wrapper">
+            <img src="./Picture1.jpg" alt="logo" class="logo" />
+          </div>
+          <h7>
+            <a ng-click="row.booleanVal = !row.booleanVal">Click Here</a> to Show
+            Instructions
+          </h7>
+          <div style="text-align: left" ng-show="row.booleanVal">
+
+
+            <div class="Information">
+              <h5>Anveshana Techno Fest 2K21</h5>
+              <p>Organized by</p>
+              <h4>Sasi Institute of Technology and Engineering</h4>
+              <h6>
+                Dates: 10<sup>th</sup> and 11<sup>th</sup> December 2021
+              </h6>
+              <div style="text-align: left">
+                <h6>General Instructions:</h6>
+                <p>
+                  &#10004;Only Engineering / Diploma / Management students are
+                  eligible to participate<br />
+                  &#10004;Students must carry a valid college id-card<br />
+                  &#10004;Registration will begins from 19th November 2021 &
+                  Spot registration
+                  will be on 10th December 2021 from 08:30AM to 10:00AM<br />
+                  &#10004;Registration includes (2 Days Entry Pass for all
+                  technical events, Kit, 2 Days Lunch
+                  ,1 Day Dinner, 2 Days Snacks, Entry Pass for Cultural Night
+                  & Magazine)<br />
+                  &#10004;Fee once paid is non-refundable
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>Please complete Your registration</div>
+          <form autocomplete="off" id="formDetails">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="fname" placeholder="FirstName" style="font-size:15px;" />
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="lname" placeholder="LastName" style="font-size:15px;" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="number" class="form-control" id="phnumber" placeholder="9615212999"
+                  style="font-size:15px;" />
+
+
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" style="font-size:15px;" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Gender">Gender</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                  <label class="form-check-label" for="flexRadioDefault1">Male</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault2">Female</label>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="Gender">DOB</label>
+                <input type="date" class="form-control" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Institution Name">Institute-Name</label>
+                <input type="text" class="form-control" placeholder="Institute-Name" />
+
+              </div>
+              <div class="form-group col-md-6">
+                <label for="Institution Name">Institute-Location</label>
+                <input type="text" class="form-control" placeholder="Institute-Place" />
+
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="Stream">Stream Being Pursued</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexCheck" id="flexCheckDefault1" checked>
+                  <label class="form-check-label" for="flexCheck1">Engineering</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexCheck" id="flexCheckDefault2">
+                  <label class="form-check-label" for="flexCheck2">Technology</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexCheck" id="flexCheckDefault3">
+                  <label class="form-check-label" for="flexCheck3">Management</label>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="Educational Qualification">Educational Qualification</label>
+                <select class="form-control dropdown">
+                  <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                  <option value="No formal education">No formal education</option>
+                  <option value="Primary education">Primary education</option>
+                  <option value="Secondary education">Secondary education or high school</option>
+                  <option value="GED">GED</option>
+                  <option value="Vocational qualification">Vocational qualification</option>
+                  <option value="Bachelor's degree">Bachelor's degree</option>
+                  <option value="Master's degree">Master's degree</option>
+                  <option value="Doctorate or higher">Doctorate or higher</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-10">
+
+                <label>Registration Amount(per person): 500/- If Paid Click Yes</label>
+              </div>
+              <div class="form-group col-md-2">
+
+                <div class="radio">
+                  <label><input type="radio" name="rdoResult" ng-model="changedVal" value="Yes" ng-change="getVal()">Yes</label>
+              </div>
+              <div class="radio">
+                  <label><input type="radio" name="rdoResult" ng-model="changedVal" value="No" ng-change="getVal()">No</label>
+              </div>
+              
+              </div>
+            </div>
+            <div ng-show="col">
+<div class="form-row">
+            <div class="form-group col-md-6">
+              <label><b>Events Want to be participate</b></label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Paper Presentation</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Poster Presentation</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Project Expo</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Technical Quiz</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Idea Bucket</label>
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label><b>Cultural Events</b></label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Music and singing</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Photography and film</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Dancing (Solo)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Painting</label>
+              </div>
+            </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label><b>Special Events</b></label>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox">
+      <label class="form-check-label">Treasure Hunt</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox">
+      <label class="form-check-label">Lucky Draw</label>
+    </div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label><b>Department Events</b></label><br>
+    <select ng-model="ss">
+      
+      <option ng-repeat="y in Countr.Departments" ng-value="{{y}}">{{y.Department}}</option>
+  
+    </select>
+    <div ng-repeat="x in ss.Events" class="form-check">
+      <input class="form-check-input" type="checkbox">
+      <label class="form-check-label">{{x}}</label>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+
+<input name="Submit" id="logins" class="btn btn-block login-btn mb-4" type="button"
+value="Submit" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>
